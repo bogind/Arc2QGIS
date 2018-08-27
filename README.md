@@ -8,8 +8,8 @@ This Repository is meant for documentation, but if you have any scripts or tools
 
 Analysis Toolbox 
 
-1.	Extract:
-1.1.	Clip
+-[] 1.	Extract:  
+-[] 1.1.	Clip  
 1.2.	Select
 1.3.	Split
 1.4.	Split By Attributes
