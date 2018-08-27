@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Select By Location</title>
+	</head>
+	<body>
+	<h2>Select By Location</h2>
+	</br>
+	<p>
+	QGIS does have a spatial selection tools, jsut like ArcGIS's <i>Select By Location</i>, it's also called Select By Location but has somewhat less options in the base tool.</br>
+	The tools is accessed either via the top menu bar -> Vector -> Research Tools, or by Searching for it by name in the processing toolbar.</br></br>
+	<img src="img/select_by_location_db0.png" height=200px width=750/></br></br>
+	<img src="img/select_by_location.png" height=350px width=450px/>
+	</p>
+	<p>
+	The tool is easy to use, lets take for our purpose a point layer and polygon layer, they look like this:</br></br>
+	<img src="img/select_by_location_db1.png" height=600px width=650/></br>
+	as you can see, some of the features in the point layer are <b>within</b> the polygon layer.</b></br>
+	what we'll do is select those features using <b>Select By Location</b>, when clicked this is the window opened:</br></br>
+	<img src="img/select_by_location_db2.png" height=600px width=600/></br>
+	we want to select features from the point layer, and compare them to all features from the polygon layer (since no features are selected within the polygon layer.</br>
+	the relation we want to check is "which features from 'A' are <b>within</b> 'B'".</br>
+	This is our result:</br></br>
+	<img src="img/select_by_location_db3.png" height=600px width=600/></br>
+	</br>
+	And thats it, Simple and easy to use, and now you know how to do that in Open Source.
+	</p>
+	</body>
+</html>
