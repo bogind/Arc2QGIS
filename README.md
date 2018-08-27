@@ -6,6 +6,8 @@ These are the most freqeuntly used tools and toolboxes I can think of, but if yo
 
 This Repository is meant for documentation, but if you have any scripts or tools you would like to publish here, feel free.
 
+A sample/howto guide can be found in the sample.html file.
+
 ### Analysis Toolbox 
 
  1.	Extract:  
