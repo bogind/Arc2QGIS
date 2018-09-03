@@ -9,7 +9,7 @@ This Repository is meant for documentation, but if you have any scripts or tools
 A sample/howto guide can be found in the sample.html file.
 
 ### Basic GIS Operations
-  - [ ] 1.		Adding Data From Different Sources
+  - [x] 1.		Adding Data From Different Sources
   - [ ] 2.		Table Operations
   - [x] 3.		Select By Location
   - [ ] 4.		Select By Expression
