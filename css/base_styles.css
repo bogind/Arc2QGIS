@@ -1,7 +1,40 @@
+body {
+    #background-image: url("../images/bg_logos.gif");
+    #background-repeat: repeat;
+}
+kbd {
+	display: inline-block;
+	margin: 0 .1em;
+	padding: .1em .6em;
+	font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+	font-size: 11px;
+	line-height: 1.4;
+	color: #242729;
+	text-shadow: 0 1px 0 #FFF;
+	background-color: #e1e3e5;
+	border: 1px solid #adb3b9;
+	border-radius: 3px;
+	box-shadow: 0 1px 0 rgba(12,13,14,0.2),0 0 0 2px #FFF inset;
+	white-space: nowrap;
+}
+kbd.qgisbtn {
+  border-radius: 0.5px;
+  box-shadow: 0 0px 0 rgba(12,13,14,0.2),0 0 0 0px #FFF inset;
+  padding: 1px 2px 1;
+  border: 1px solid black;
+  background-color: #e1e3e5;
+}
+li{
+	background-color: white;
+	#width: 250px;
+}
 pre code {
   background-color: #eee;
   border: 1px solid #999;
   display: block;
   padding: 20px;
   width: 600px;
+}
+p {
+	width: 700px;
 }

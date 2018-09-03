@@ -8,9 +8,23 @@ This Repository is meant for documentation, but if you have any scripts or tools
 
 A sample/howto guide can be found in the sample.html file.
 
+### Basic GIS Operations
+  - [ ] 1.		Adding Data From Different Sources
+  - [ ] 2.		Table Operations
+  - [x] 3.		Select By Location
+  - [ ] 4.		Select By Expression
+  - [ ] 5.		Select By Expression - Advanced
+  - [ ] 6.		Editing Features
+  - [ ] 7.		Symbology
+  - [ ] 8.		Symbology - Advanced
+  - [ ] 9.		Plugins
+  - [ ] 10.		Labeling Features
+  - [ ] 11.		Exporting Data
+  - [ ] 12.		Connecting to Databases
+
 ### Analysis Toolbox 
 
- 1.	Extract:  
+1.	Extract:  
   - [ ] 1.1.	Clip  
   - [ ] 1.2.	Select
   - [ ] 1.3.	Split

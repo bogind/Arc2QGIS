@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>Importing Data</title>
+		<link rel="stylesheet" type="text/css" href="../css/base_styles.css">
+	</head>
+	<body>
+	<h1>Adding Data From Different Sources - INCOMPLETE</h1>
+	</br>
+	<ul id="top">
+		<li><a href="#shp">From a Shapefile (*.shp) or GeoJson</a></li>
+		<li><a href="#fgdb">From a ESRI FileGeoDataBase (*.gdb)</a></li>
+		<li><a href="#gpkg">From a GeoPackage (*.gpkg)</a></li>
+		<li><a href="#sqldb">From a SQL DataBase </a></li>
+		<li><a href="#wms">From a Web Service (WMS,WFS,XYZ tiles)</a></li>
+		<li></li>
+	</ul>
+	<h2 id="shp">Import From ESRI Shapefile (*.shp)</h2>
+	<p>
+	The easiest way to import data into our workspace is using the <b>Data Source Manager</b> <img src="img/data_source_manager_db0.png" height=35px width=35px/>. 
+	You can find it on the toolbar below the new project button, or open it using the <kbd>Ctrl</kbd>+<kbd>L</kbd> keyboard shortcut.
+	</br><img src="img/import_data_db0.png" height=150px width=200px/></br>
+	Once the window opens you have a selection of data sources, to load an ESRI Shapefile or GeoJson or any other vector file type,
+	just select the <b>Vector</b> data type, the <b>file</b> source type and select your file. 
+	Click <kbd class="qgisbtn">Add</kbd>, and you can close the window, and see your layer in the workspace.</br>
+	</br><img src="img/import_data_db2.png" height=450px width=650/></br></br>
+	Another Option is just navigating to the folder using the browser window and dragging the layers from there</br>
+	</br><img src="img/import_data_db5.png" height=450 width=250/></br></br>
+	And thats it, Simple and easy to use, and now you know how to do that in Open Source.
+	</br><a href="#top">Go back to the top</a>
+	</p>
+	</br>
+	<h2 id="fgdb">Import From ESRI FileGeoDataBase (*.gdb)</h2>
+	<p>
+	You can read data from an ESRI FileGeoDataBase with the base version of QGIS.
+	however, if you want to be able to edit and rewrite the layers into the database, you will need the gdal-filegdb driver.
+	you can install it using the <a href="">OSGEO4W</a> installer.
+	just select to install it like so:</br>
+	</br><img src="img/install_gdalfgdb_db0.png" height=450px width=650/></br></br>
+	The easiest way to import data into our workspace is using the <b>Data Source Manager</b> <img src="img/data_source_manager_db0.png" height=35px width=35px/>. 
+	You can find it on the toolbar below the new project button, or open it using the <kbd>Ctrl</kbd>+<kbd>L</kbd> keyboard shortcut.
+	Once the window opens you have a selection of data sources, to load an ESRI Shapefile or GeoJson or any other vector file type,
+	just select the <b>Vector</b> data type, the <b>folder</b> source type and select the <b>.gdb</b> folder. 
+	</br><img src="img/import_data_db3.png" height=450px width=650/></br></br>
+	Once you click the <kbd class="qgisbtn">Add</kbd> button, a second window will open and ask which of the FileGeoDataBase layers you want to import.</br>
+	</br><img src="img/import_data_db4.png" height=250 width=450/></br></br>
+	You can now the close the <b>Data Source Manager</b> window, and see your layers in the workspace.</br>
+	Another Option is just navigating to the folder using the browser window and dragging the layers from there</br>
+	</br><img src="img/import_data_db5.png" height=450 width=250/></br></br>
+	And thats it, Simple and easy to use, and now you know how to do that in Open Source.
+	</br><a href="#top">Go back to the top</a>
+	</p>
+	</br>
+	<h2 id="gpkg">Import From a GeoPackage (*.gpkg)</h2>
+	<p>
+	
+	</p>
+	</br>
+	<h2 id="sqldb">Import From a SQL DataBase</h2>
+	<p>
+	
+	</p>
+	</br>
+	<h2 id="wms">Import From a Web Service (WMS,WFS,XYZ tiles)</h2>
+	<p>
+	
+	</p>
+	</body>
+</html>
