@@ -11,7 +11,8 @@
 		<li><a href="#fgdb">From a ESRI FileGeoDataBase (*.gdb)</a></li>
 		<li><a href="#gpkg">From a GeoPackage (*.gpkg)</a></li>
 		<li><a href="#sqldb">From a SQL DataBase </a></li>
-		<li><a href="#wms">From a Web Service (WMS,WFS,XYZ tiles)</a></li>
+		<li><a href="#wms">From a Web Service (WMS,WFS)</a></li>
+		<li><a href="#xyz">BaseMaps From a Web Service (XYZ tiles)</a></li>
 	</ul>
 	<h2 id="shp">Import From ESRI Shapefile (*.shp)</h2>
 	<p>
@@ -51,7 +52,18 @@
 	</br>
 	<h2 id="gpkg">Import From a GeoPackage (*.gpkg)</h2>
 	<p>
-	
+	Importing data from a GeoPackage can work in a number of ways, .gpkg files are recognised by QGIS as both a specific file and as the database that they are.  
+	That means that a GeoPackage can contain many layers and not just one.
+	</p>
+	<h3>The Shapefile way</h3>
+	<p>
+	Just like loading a Shapefile you can import data from a .gpkg file simply by using the <b>Data Source Manager</b> and selecting the file in the Vector data type.
+	<img src="img/import_gpkg_db0.PNG" height=450px width=650/>
+	</p>
+	<h3>The FileGeoDataBase way</h3>
+	<p>
+	If the GeoPackage you are loading has more than one layer, than after clicking the add button, you will be prompted to select which layers you want to add, just like while importing data from an ESRI FileGeoDataBase.
+	<img src="img/import_gpkg_db1.PNG" height=450px width=650/>
 	</p>
 	</br>
 	<h2 id="sqldb">Import From a SQL DataBase</h2>
@@ -59,9 +71,82 @@
 	
 	</p>
 	</br>
-	<h2 id="wms">Import From a Web Service (WMS,WFS,XYZ tiles)</h2>
+	<h2 id="wms">Import From a Web Service (WMS,WFS)</h2>
 	<p>
-	
+	Importing data or tiles from a web service, any type of webservice (WMS, WFS, WCS etc.), can be quite easy when you have the service's URL.
+	all you have to do is open the <b>Data Source Manager</b> <img src="img/data_source_manager_db0.PNG" height=35px width=35px/>. 
+	You can find it on the toolbar below the new project button, or open it using the <kbd>Ctrl</kbd>+<kbd>L</kbd> keyboard shortcut.
+	</br><img src="img/import_data_db0.PNG" height=150px width=200px/></br>
+	once the data source manager is opened you can select the type of service you want to add,
+	in this example we'll add NASA's Earth Observation (NEO) WMS.</br>
+	Select the WMS/WMTS option and click on <b><u>N</u>ew</b>:
+	</br><img src="img/import_data_db6.PNG" height=450px width=650/></br>
+	The new service window will open, you will notice the window differs very little between different types of services.
+	the new window should look like this:
+	</br><img src="img/import_data_db7.PNG" height=450px width=650/></br>
+	We can just call the new service <b>NASA</b> or <b>NEO</b> 
+	and add the URL : <code>https://neo.sci.gsfc.nasa.gov/wms/wms</code></br>
+	if the service requires a user name or password you can define the configuration under <b>Authentication->Basic</b>,
+	if it does not you can click on <b>OK</b> and back in the Data Source Manager click on connect and see all the layers our new service added:
+	</br><img src="img/import_data_db8.PNG" height=450px width=650/></br>
+	And thats it, Simple and easy to use, and now you know how to do that in Open Source.
+	</p>
+	<p>
+		<h3>A Not on ArcGIS Web Services</h3>
+		Some ArcGIS Online (AGOL) Services will only work if defined as an <b>ArcGIS Map/Feature Server</b>.</br>
+		If your service does not work try defining it as ArcGIS Map/Feature Server instead of regular WMS/WFS.
+	</p>
+	<h3 id="wms-suggestions">Some Open Web Services You Can Add</h3>
+	<p>
+		You are welcome to send suggestions to be added to this list.
+		it's just a short list of services i've found and are worth a check.</br>
+		Services marked with a star <b>*</b> are ArcGIS Online services.
+		<ul>
+			<li>WMS<ul>
+					<li>NASA Earth Observations (NEO) - https://neo.sci.gsfc.nasa.gov/wms/wms</li>
+					<li>USGS Web Map Services - https://lpdaacsvc.cr.usgs.gov/ogc/wms</li>
+					<li>USGS 1 Meter Imagery - https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer</li>
+					<li>*ESRI World Imagery - https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer</li>
+					<li>*ESRI Street Map - https://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer</li>
+					<li>*ESRI World Topo Map (the AGOL basemap) - https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer</li>
+					<li>*Israeli Planning Adminitration (iplan) Xplan - https://ags.iplan.gov.il/arcgis/rest/services/PlanningPublic/Xplan/MapServer</li>
+			</ul></li>
+			<li>WFS<ul>
+				<li>US Parks Boundaries - http://gstore.unm.edu/apps/rgis/datasets/7bbe8af5-029b-4adf-b06c-134f0dd57226/services/ogc/wfs?VERSION=1.0.0</li>
+				<li>USGS Transportation - https://services.nationalmap.gov/arcgis/rest/services/WFS/structures/MapServer/</li>
+				<li>USGS Contours - https://services.nationalmap.gov/arcgis/rest/services/WFS/Contours/MapServer/</li>
+				<li>USGS GeoNames - https://services.nationalmap.gov/arcgis/rest/services/WFS/geonames/MapServer</li>
+				<li>*Tel Aviv Buildings - https://gisn.tel-aviv.gov.il/arcgis/rest/services/WM/BuildingsWM/MapServer</li>
+				<li>*Tel Aviv Urban GIS Map Layers - https://gisn.tel-aviv.gov.il/arcgis/rest/services/WM/IView2MapHebWM/MapServer</li>
+			</ul></li>
+			<li>WCS<ul>
+					<li>USGS Elevation - https://elevation.nationalmap.gov/arcgis/services/3DEPElevation/ImageServer/WCSServer</li>
+				</ul></li>
+			<li id="xyz-suggestions">XYZ Tiles<ul>
+				<li>Carto Positron - https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png</li>
+				<li>ESRI Topo Map - https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}</li>
+				<li>ESRI World Imagery - https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}</li>
+				<li>Google Maps - https://mt1.google.com/vt/lyrs=r&x={x}&y={y}&z={z}</li>
+				<li>Google Satellite - http://www.google.cn/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}</li>
+				<li>Google Terrain - https://mt1.google.com/vt/lyrs=t&x={x}&y={y}&z={z}</li>
+				<li>OpenStreetMap Black & White - http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png</li>
+				<li>Stamen Watercolor - http://c.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg</li>
+				<li>Stamen Terrain - http://a.tile.stamen.com/terrain/{z}/{x}/{y}.png</li>
+				<li>ThunderForest Spinal Map (requires an API key) - https://tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png?apikey={your API key}</li>
+				<li>Waze World - https://worldtiles3.waze.com/tiles/{z}/{x}/{y}.png</li>
+			</ul></li>
+		</ul>
+	</p>
+	<h2 id="xyz">Add New Basemaps From a Web Service (XYZ tiles)</h2>
+	<p>Adding XYZ tiles to use as basemaps is a very short process.
+		you just have to right-click on the <b>XYZ Tiles icon in the browser:</b>
+	</br><img src="img/xyz0_db.PNG" height=650px width=450/></br>
+	select a name for the tile you want to add, and add add the URL.</br>
+	the example below adds the Positron Basemap from CartoDB:
+	</br><img src="img/xyz1_db.PNG" height=650px width=450/></br>
+	The name I set is "Carto Positron", and the URL for it is: https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png
+	And thats it, Simple and easy to use, and now you know how to do that in Open Source.
+	for a short list of nice XYZ Tiles can be found just above this section, <a href="#xyz-suggestions">here</a>.
 	</p>
 	</body>
 </html>
