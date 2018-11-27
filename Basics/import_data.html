@@ -66,9 +66,22 @@
 	<img src="img/import_gpkg_db1.PNG" height=450px width=650/>
 	</p>
 	</br>
-	<h2 id="sqldb">Import From a SQL DataBase</h2>
+	<h2 id="sqldb">Import From a SQL Database</h2>
 	<p>
-	
+	To import data from an SQL database you will first have to connect to the server hosting the database.<br>
+	In the browser you can create a new connection by right-clicking on the server type you want to connect to (in this example we'll use PostgreSQL's PostGIS extension).
+	and selecting "New Connection...".
+	</br><img src="img/import_sql_db0.png" height=500px width=450px/></br><br>
+	Once the new connection window opens you need to name the new connection, usually the database's name is the best choice. 
+	Unless your DBA changed the port of the database the port QGIS suggests should work with database of your choice, here you can see that it chose 5432 for PostgreSQL. 
+	In this case i added the <b>host : localhost</b> but usually in case your database is on the same machine or netwrok this won't be necessary.
+	next you have to add the name of the database you want to connect to, if you are using PostgreSQL you will need to know the name, in MicroSoft SQL Server you can get a list of available databases. 
+	If your database is not open to anonymous users you will need to set your username and password under <b>Authentication->Basic</b>, If you won't set them QGIS will ask you to sign in every time you will want to use the data.<br>
+	</br><img src="img/import_sql_db1.png" height=650px width=450px/></br><br>
+	Once the connection is defined you can add layers and tables from the database by dragging them to the browser or the workspace. <br>
+	</br><img src="img/import_sql_db2.png" height=505px width=420px/></br><br>
+	And thats it, Simple and easy to use, and now you know how to do that in Open Source.
+	</br><a href="#top">Go back to the top</a>
 	</p>
 	</br>
 	<h2 id="wms">Import From a Web Service (WMS,WFS)</h2>
@@ -90,6 +103,7 @@
 	if it does not you can click on <b>OK</b> and back in the Data Source Manager click on connect and see all the layers our new service added:
 	</br><img src="img/import_data_db8.PNG" height=650px width=900/></br>
 	And thats it, Simple and easy to use, and now you know how to do that in Open Source.
+	</br><a href="#top">Go back to the top</a>
 	</p>
 	<p>
 		<h3>A Not on ArcGIS Web Services</h3>
@@ -148,6 +162,7 @@
 	<code>https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png</code></br>
 	And thats it, Simple and easy to use, and now you know how to do that in Open Source.</br>
 	for a short list of nice XYZ Tiles can be found just above this section, <a href="#xyz-suggestions">here</a>.</br>
+	</br><a href="#top">Go back to the top</a>
 	</p>
 	</body>
 </html>
