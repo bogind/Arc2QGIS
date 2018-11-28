@@ -8,6 +8,7 @@
 	</br>
 	<ul id="top">
 		<li><a href="#shp">From a Shapefile (*.shp) or GeoJson</a></li>
+		<li><a href="#csv">From Delimited Text (*.csv/*.txt)</a></li>
 		<li><a href="#fgdb">From a ESRI FileGeoDataBase (*.gdb)</a></li>
 		<li><a href="#gpkg">From a GeoPackage (*.gpkg)</a></li>
 		<li><a href="#sqldb">From a SQL DataBase </a></li>
@@ -29,6 +30,59 @@
 	</br><img src="img/import_data_db2.PNG" height=450px width=650/></br></br>
 	Another Option is just navigating to the folder using the browser window and dragging the layers from there</br>
 	</br><img src="img/import_data_db5.PNG" height=450 width=250/></br></br>
+	And thats it, Simple and easy to use, and now you know how to do that in Open Source.
+	</br><a href="#top">Go back to the top</a>
+	</p>
+	</br>
+	<h2 id="csv">Import From Delimited Text (*.csv/*.txt)</h2>
+	</br>
+	<p>To import data from a delimited text file (*.csv in most cases) we first have to open the <b>Data Source Manager</b> <img src="img/data_source_manager_db0.PNG" height=35px width=35px/>. 
+		You can find it on the toolbar below the new project button, or open it using the <kbd>Ctrl</kbd>+<kbd>L</kbd> keyboard shortcut.
+		</br><img src="img/import_data_db0.PNG" height=150px width=200px/></br>
+		Once the window opens you have a selection of data sources, select the <b>Delimited Text</b> option.<br>
+		next you will have to choose your file, and the delimiter style it has.<br>
+		The default option for delimiter is <b>comma</b>, though you can also choose a custom delimiter such as tabs or spaces.<br>
+	</br><img src="img/import_csv_db0.PNG" height=550px width=750/></br>
+	</br><img src="img/import_csv_db1.PNG" height=550px width=750/></br></br>
+	If your file has <b>X,Y</b> or <b>Latitude, Longitude</b> columns QGIS will most likely identify them to load the file as a point layer.<br>
+	The file in the example can be found here: <a href="data/bycode_2.csv">bycode_2.csv</a>. it contains the centroids of all the settlements in Israel.<br>
+	The table looks something like this (but has a lot more rows):
+	<table><tr>
+		<th>code</th>
+		<th>X</th>
+		<th>Y</th>
+	  </tr>
+	  <tr>
+		<td>967</td>
+		<td>20400</td>
+		<td>57100</td>
+	  </tr>
+	  <tr>
+		<td>472</td>
+		<td>21052</td>
+		<td>63481</td>
+	  </tr>
+	</table><br>
+	</br><img src="img/import_csv_db2.PNG" height=550px width=550/></br></br>
+	If you want to load <b>Polygons</b> or <b>Lines</b> from a Delimited file they need to be in <a href="https://en.wikipedia.org/wiki/Well-known_text">Well Known Text</a> Format.
+	For this example our line geometry is stroed in the <b>geom</b> column. QGIS identifies the column automatically and will detect on its own that we have Line geometry in the column.<br>
+	The file in the example can be found here: <a href="data/lines.csv">lines.csv</a>. it contains 5 randomly drawn line geometries.<br>
+	The table looks something like this:
+	<table><tr>
+		<th>fid</th>
+		<th>geom</th>
+	  </tr>
+	  <tr>
+		<td>2</td>
+		<td>LineString (-0.10774411 -0.30864198, 0.46464646 0.18294052)</td>
+	  </tr>
+	  <tr>
+		<td>3</td>
+		<td>LineString (-0.15263749 -0.22109989, 0.41975309 -0.31986532)</td>
+	  </tr>
+	</table><br>
+	</br><img src="img/import_csv_db3.PNG" height=550px width=550/></br></br>
+	Click <kbd class="qgisbtn">Add</kbd>, and you can close the window, and see your layer in the workspace.</br>
 	And thats it, Simple and easy to use, and now you know how to do that in Open Source.
 	</br><a href="#top">Go back to the top</a>
 	</p>
