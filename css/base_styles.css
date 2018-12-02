@@ -1,6 +1,6 @@
 body {
-    #background-image: url("../images/bg_logos.gif");
-    #background-repeat: repeat;
+    background-image: url("../images/bg_logos.gif");
+    background-repeat: repeat;
 }
 kbd {
 	display: inline-block;
@@ -26,7 +26,7 @@ kbd.qgisbtn {
 }
 li{
 	background-color: white;
-	#width: 250px;
+	width: 250px;
 }
 pre code {
   background-color: #eee;
