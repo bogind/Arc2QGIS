@@ -26,7 +26,7 @@ kbd.qgisbtn {
 }
 li{
 	background-color: white;
-	width: 250px;
+	width: 30vw;
 }
 pre code {
   background-color: #eee;
@@ -36,7 +36,8 @@ pre code {
   width: 600px;
 }
 p {
-	width: 700px;
+    width: 75vw;
+    font-size: 120%;
 }
 table, th, td {
     border: 1px solid black;
