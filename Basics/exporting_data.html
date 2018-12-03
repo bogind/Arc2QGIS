@@ -45,7 +45,19 @@
         </br><a href="#top">Go back to the top</a><br>
         <h2 id="fgdb">Saving To an ESRI FileGeoDataBase (*.gdb)</h2>
         <p>
-
+                You can read data from an ESRI FileGeoDataBase with the base version of QGIS.
+                however, if you want to be able to edit and rewrite the layers into the database, you will need the gdal-filegdb driver.
+                you can install it using the <a href="">OSGEO4W</a> installer.
+                just select to install it like so:</br>
+                </br><img src="img/install_gdalfgdb_db0.PNG" height=450px width=650/></br></br>
+                After your installation has the new library plugin (gdal-fgdb) you can simply save your layers into an existing ESRI FileGeoDataBase or create a new one while saving.
+                this can be done by right-clicking the layer you want to save, <b>Export</b>-><b>Save Features As...</b> or <b>Save Selected Features As..</b> if you want to save only your selected features.<br>
+                </br><img src="img/export_vector_db0.PNG" height=700px width=900px/></br>
+                You then need to select the format you want to save in at the top of the window, simply choose <b>ESRI FileGDB</b>. Now here you will most likely get annoyed, since the expected input in the browse window is a file, and not a folder.
+                My suggestion, just navigate to where your *.gdb folder is, or where you want to create it and simply copy the full path for an existing one or just add the name you want to give to a new FileGeoDataBase followed by <b>.gdb</b>.
+                In this example the folder <i>training2</i> doesn't exist yet.<br>
+                <br><img src="img/export_fgdb_db0.PNG" height=670px width=600px/></br><br>
+                And thats it, Simple and easy to use, and now you know how to do that in Open Source.</br>
         </p>
         </br><a href="#top">Go back to the top</a><br>
         <h2 id="db">Saving To a DataBase</h2>
