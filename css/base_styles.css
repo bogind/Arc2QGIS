@@ -1,6 +1,7 @@
 body {
     background-image: url("../images/bg_logos.gif");
     background-repeat: repeat;
+    font-size: 120%;
 }
 kbd {
 	display: inline-block;
@@ -37,7 +38,6 @@ pre code {
 }
 p {
     width: 60vw;
-    font-size: 120%;
 }
 table, th, td {
     border: 1px solid black;

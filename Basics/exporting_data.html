@@ -5,7 +5,6 @@
 	</head>
 	<body>
         <h1>Saving Data From Different Sources and Format Conversions</h1>
-        </br>
         <ol id="top">
             <li>
                 <ul><h4><u><a href="#vector">Vector Formats</a></u></h4>
@@ -28,8 +27,9 @@
             </li>
         </ol>
         <br>
-        
-        </br><a href="#top">Go back to the top</a><br>
+        <a href="../Basics/basics.html">Back To Basic Concepts</a><br>
+        <a href="..">Back To Homepage</a><br>
+        <br>
         <br><h1 id="vector">Vector Formats</h1><br>
         <h2>*A note on Web Feature Services (WFS)</h2>
         <p>Some Web Feature Services layers can be saved with the methodes for saving vector data below, 
@@ -54,7 +54,7 @@
                 however, if you want to be able to edit and rewrite the layers into the database, you will need the gdal-filegdb driver.
                 you can install it using the <a href="">OSGEO4W</a> installer.
                 just select to install it like so:</br>
-                </br><img src="img/install_gdalfgdb_db0.PNG" height=450px width=650/></br></br>
+                </br><img src="img/install_gdalfgdb_db0.PNG" height=450px width=650px/></br></br>
                 After your installation has the new library plugin (gdal-fgdb) you can simply save your layers into an existing ESRI FileGeoDataBase or create a new one while saving.
                 this can be done by right-clicking the layer you want to save, <b>Export</b>-><b>Save Features As...</b> or <b>Save Selected Features As..</b> if you want to save only your selected features.<br>
                 </br><img src="img/export_vector_db0.PNG" height=700px width=900px/></br>
@@ -68,7 +68,23 @@
         <h2 id="db">Saving To a DataBase</h2>
         <h3>Using The DB Manager</h3>
         <p>
-            
+            Exporting a layer to an existing database connection can be done by performing the foolowing steps. 
+            From the top menu select <b>Database</b> and then select <b>DB Manager</b>.<br>
+        </br><img src="img/export_db_db0.PNG" height=215px width=905px/></br></br>
+        Then select the database you want to save into in the DB Manager window. 
+        In this example i'm using the <b>qgistest</b> database stored in a PostgreSQL host with the PostGIS extansion enabled.
+        QGIS doesn't have to connect only to spatial databases but when saving data and working in the DB Manager those are all the options possible.<br>
+        </br><img src="img/export_db_db1.PNG" height=640px width=750px/></br></br>
+        You can notice that QGIS treats GeoPackage connections as database connectins. that is because they technically are. GeoPackage files are a modification of SQLite database files and can behave similliar to them. 
+        The next step you have to take is click on the <b>Import Layer/File...</b>, this will open a new window which should look like this.
+        The window allows you to choose a layer from the workspace with the dropdown menu, or a file with the <kbd>...</kbd> button next to it.<br>
+        </br><img src="img/export_db_db2.PNG" height=450px width=500px/></br></br>
+        You can now select the schema in the database you want to save the layer to and the name for the table.
+        The options below allow you select the primary key column, the geometry column to calculate geometry from if you want to convert a table to a spatial table.
+        It's also possible to reproject your layer to a new spatial reference, select the encoding, split multipart geometries to single part, convert field names to lowercase (recommended in PostgreSQL) and create a spatial index.
+        Be patient as the process can take some time, depending on the size of your layer, until you get the message that the <i>Import was successful</i><br>
+        </br><img src="img/export_db_db3    .PNG" height=125px width=195px/></br></br>
+        And thats it, Simple and easy to use, and now you know how to do that in Open Source.</br>
         </p>
         </br><a href="#top">Go back to the top</a><br>
         <h2 id="dbfile">Saving To a Layer in a Multiple Layers Database</h2>
