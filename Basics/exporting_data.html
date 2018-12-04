@@ -66,6 +66,12 @@
         </p>
         </br><a href="#top">Go back to the top</a><br>
         <h2 id="db">Saving To a DataBase</h2>
+        <h3>*Why the example uses only PostgreSQL</h3>
+        <ol>
+            <li>Because QGIS plays very well with PostGIS, which is an extension for PostgreSQL</li>
+            <li>Because every section takes time to write, and I have and use PostgreSQL.</li>
+            <li>I do plan to add other SQL databases in the future, if you can document them yourself commits are welcome</li>
+        </ol>
         <h3>Using The DB Manager</h3>
         <p>
             Exporting a layer to an existing database connection can be done by performing the foolowing steps. 
@@ -90,7 +96,18 @@
         <h2 id="dbfile">Saving To a Layer in a Multiple Layers Database</h2>
         <h3>Saving in GeoPackage, Spatialite, Sqlite etc.. </h3>
         <p>
-
+        GeoPackage, Sqlite and Spatialite files are databases built from a single file, with GeoPackage and Spatialite being able to store spatial data. 
+        They store data like any other database, but can be shared very easily since they are formed solely from one file. 
+        To store vector data in them you right-click the layer you want to save then <b>Export</b>-><b>Save Features As...</b> or <b>Save Selected Features As..</b> if you want to save only your selected features.<br>
+        </br><img src="img/export_vector_db0.PNG" height=700px width=900px/></br>
+        You then need to select the format you want to save in at the top of the window, simply choose <b>GeoPackage</b> for this example, but the same options are applicable for <b>Sqlite</b> and <b>Spatialite</b>.<br>
+        You can either create a new file by choosing a path and adding a name or an existing one by choosing it.<br>
+        </br><img src="img/export_gpkg_db0.PNG" height=670px width=590px/></br>
+        <font size="5"><b>!!!</b></font> Pay attention that the default layer name is the same name that the file has, if you want to store multiple layers on the file make sure you change the <b>Layer Name</b>.<br>
+        </br><img src="img/export_gpkg_db1.PNG" height=670px width=590px/></br>
+        Notice that you can choose the <i>GEOMETRY</i> column in the options here, this means you can convert a regular table to a spatial layer while exporting it.<br>
+        To save the file you simply click <kbd>OK</kbd>, <br>
+        And thats it, Simple and easy to use, and now you know how to do that in Open Source.</br>
         </p>
         </br><a href="#top">Go back to the top</a><br>
         <br><h1 id="raster">Raster Formats</h1><br>
