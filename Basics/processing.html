@@ -3,6 +3,47 @@
         <title>The Processing Toolbox</title>
     </head>
     <body>
-        <p>This page doesn't exist yet, sorry</p>
+            <h1>The Processing Toolbox</h1>
+            <br>
+            <ul id="top">
+                <li><a href="intro">An Introduction To The Processing Toolbox In QGIS</a></li>
+                <li><a href="missing">My Processing Menu\Toolbox is Missing</a></li>
+            </ul>
+            <a href="../Basics/basics.html">Back To Basic Concepts</a><br>
+            <a href="..">Back To Homepage</a><br>
+            <br><br>
+            <h2 id="intro">An Introduction To The Processing Toolbox In QGIS</h2>
+            <br><br>
+        <p>Just like the Toolboxes in ArcGIS Desktop, QGIS has the Processing toolbox. 
+            It contains processing tools and algorithms not only from QGIS itself but also from other sources such as GRASS GIS, SAGA and GDAL (which ArcGIS also uses). 
+            To use the processing toolbox you first have to activate it. this can be done by clicking the processing menu, and then select Toolbox<br>
+        </br><img src="img/processing_toolbox_db0.png" height=110px width=630px/></br>
+        After this is done the toolbox will open on the right hand side of the screen.<br>
+    </br><img src="img/processing_toolbox_db2.png" height=365px width=680px/></br>
+     This is where you can search for tools by name through the search bar or by category\ provider software manually.<br>
+    </br><img src="img/processing_toolbox_db1.png" height=590px width=300px/></br>
+        Some processing can be in both the base version of QGIS or in one of the other providers, for example the aggregate (or join by location) tool is found in both base QGIS twice and in both GRASS and SAGA. 
+        <br></br><img src="img/processing_toolbox_db3.png" height=590px width=300px/></br>
+        And thats it. you can use the tools according to each individual tools capability. <br>
+        If there is a tool you can't find and need help, you can search for it in the guide 
+        by the name it has in ArcGIS Desktop and if we don't have it yet you can contact us through the <a href="">issues page</a>
+    </p>
+</br><a href="#top">Go back to the top</a>
+<br><br>
+<h2 id="missing">My Processing Menu\Toolbox is Missing</h2>
+<br><br>
+<p>
+The processing toolbox is a <b>Core Plugin</b> in QGIS and as such must always be installed.<br>
+That said, sometimes new users can't find it (and experienced users who forgot they went through this part).
+If your toolber doesn't have the processing menu and looks like this, don't be scared.<br>
+</br><img src="img/missing_processing_db0.PNG" height=110px width=620px/></br>
+It just means you have to enable the processing plugin.<br>
+To do this simply click the <u>P</u>lugins menu or <kbd>alt</kbd>+<kbd>P</kbd> and open the plugins manager.<br>
+</br><img src="img/missing_processing_db1.PNG" height=110px width=620px/></br>
+Search for "processing" and enable the plugin, this can take some time on slower systems.<br>
+</br><img src="img/missing_processing_db2.PNG" height="510px" width="890px"/></br>
+And thats it, you now have the processing menu and through it the processing toolbox.
+to open the processing toolbox <a href="#intro">go back up</a>
+</p>
     </body>
 </html>
