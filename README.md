@@ -19,8 +19,9 @@ A sample/howto guide can be found in the sample.html file.
   - [ ] 8.		Symbology - Advanced
   - [ ] 9.		Plugins
   - [ ] 10.		Labeling Features
-  - [ ] 11.		Exporting Data
+  - [x] 11.		Exporting Data
   - [ ] 12.		Connecting to Databases
+  - [x] 13.   Introduction to The Processing Toolbox
 
 ### Analysis Toolbox 
 
