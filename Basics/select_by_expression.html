@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>Select By Expression</title>
+		<link rel="stylesheet" type="text/css" href="../css/base_styles.css">
+	</head>
+	<body>
+	<h1>Select By Expression</h1>
+	</br>
+	<a href="../Basics/basics.html">Back To Basic Concepts</a><br>
+    <a href="..">Back To Homepage</a><br>
+	<p>
+    For this tutorial we'll use Natural Earth's <i><a href="https://www.naturalearthdata.com/downloads/10m-cultural-vectors/">Admin 0 Countries</a></i> dataset. 
+	It displays the political boundaries of 242 countries in the world. <br>
+	You can start the selection either by clicking the select by expression <img src="img/tables_button_db8.PNG" height=25px width=25px/> icon from the toolbar, 
+	or if it's not there look for the other selection methods and click the small down arrow next to the and the click it.<br>
+	<img src="img/select_by_expression_db0.png" height=170px width=850px/></br></br>
+	The other way is by accessing it through the attribute table, which you can open by clicking it's icon <img src="img/tables_db2.png" title="Open Attribute Table" height=25px width=25px/> (<kbd>F6</kbd>)<br>
+	and then clicking the select by expression <img src="img/tables_button_db8.PNG" height=25px width=25px/> icon.<br>
+	<img src="img/select_by_expression_db1.png" height=115px width=790px/></br></br>
+	This window should open up for you: <br>
+	<img src="img/select_by_expression_db2.png" height=700px width=1000px/></br></br>
+	What we are going to do is select all the countries in africa, the data has a <b>CONTINENT</b> field, 
+	but we want to make sure we are going by the exact way both the field name and the value <i>Africa</i> are written.
+	To do this we can either select <i>Fields and Values</i> from the list in the middle of the window and scroll down to find the <b>CONTINENT</b> field,
+	or we can use the search bar by typing the field name. <br>
+	<img src="img/select_by_expression_db3.png" height=700px width=1000px/></br></br>
+	<img src="img/select_by_expression_db4.png" height=700px width=1000px/></br></br>
+	You can double click the <b>CONTINENT</b> field to make sure it's in the expression on the left part of the window then clicking on the <kbd class="qgisbtn">=</kbd> sign button,
+	once the field is marked we can get either a sample of how the values in it are wirtten by clicking on <kbd class="qgisbtn"> All Unique </kbd> or <kbd class="qgisbtn"> 10 Samples </kbd> buttons.
+	Clicking the value you want or just an example to make sure your syntax is correct should be enough to complete our expression.<br>
+	the last step is to decide wether you want to create a new selection (default), add or remove from the current selection or filter it.
+	You can do this by clicking the small arrow next to the <kbd class="qgisbtn"><img src="img/tables_button_db8.PNG" height=20px width=20px/> <b>Select Features</b> </kbd> button.<br>
+	<img src="img/select_by_expression_db6.png" height=125px width=245px/></br></br><br>
+	Our new selection should look like this <br><br>
+	<img src="img/select_by_expression_db5.png" height=275px width=550px/></br></br>
+	And thats it, Simple and easy to use, and now you know how to do that in Open Source.
+	</p>
+	</br><a href="#top">Go back to the top</a><br>
+	</body>
+</html>

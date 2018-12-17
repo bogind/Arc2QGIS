@@ -10,9 +10,9 @@ A sample/howto guide can be found in the sample.html file.
 
 ### Basic GIS Operations
   - [x] 1.		Adding Data From Different Sources
-  - [ ] 2.		Table Operations
+  - [x] 2.		Table Operations
   - [x] 3.		Select By Location
-  - [ ] 4.		Select By Expression
+  - [x] 4.		Select By Expression
   - [ ] 5.		Select By Expression - Advanced
   - [ ] 6.		Editing Features
   - [ ] 7.		Symbology
