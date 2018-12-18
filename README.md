@@ -17,7 +17,7 @@ A sample/howto guide can be found in the sample.html file.
   - [ ] 6.		Editing Features
   - [ ] 7.		Symbology
   - [ ] 8.		Symbology - Advanced
-  - [ ] 9.		Plugins
+  - [x] 9.		Plugins
   - [ ] 10.		Labeling Features
   - [x] 11.		Exporting Data
   - [ ] 12.		Connecting to Databases
