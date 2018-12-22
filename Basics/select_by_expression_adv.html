@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Select By Expression - Advanced Queries</title>
+		<link rel="stylesheet" type="text/css" href="../css/base_styles.css">
+	</head>
+	<body>
+			<header></header>
+    <div class="sidenav">
+        <ul>
+            <li><a href="..">Home</a></li>
+            <li><a href="../Basics/basics.html" class="active">Basic GIS Operations</a></li>
+            <li><a href="../Analysis/analysis.html">Analysis Toolbox</a></li>
+            <li><a href="../Conversion/conversion.html">Conversion Toolbox</a></li>
+            <li><a href="../Data Management/data_management.html">Data Management Toolbox</a></li>
+            <li><a href="../Geocoding/geocoding.html">Geocoding Toolbox</a></li>
+            <li><a href="../Network Analyst/network_analyst.html">Network Analyst Toolbox</a></li>
+            <li><a href="../Spatial Analyst/spatial_analyst.html">Spatial Analyst Toolbox</a></li>
+            <li><a href="../Spatial Statistics/spatial_statistics.html">Spatial Statistics Toolbox</a></li>
+          </ul>
+        </div>
+    <div class="content">
+	<h1>Select By Expression  - Advanced Queries</h1>
+	</br>
+	<a href="../Basics/basics.html">Back To Basic Concepts</a><br>
+    <a href="..">Back To Homepage</a><br>
+    <p>
+        <u><b>Notice</b></u> - This tutorial assumes you are allready familiar with opening the attributes table and performing simple <b>Select By Expression</b> queries.<br>
+        If your'e not, go back to:<br>
+        <a href="../Basics/tables.html">Table Operations</a> & <br>
+        <a href="select_by_expression.html">Select By Expression</a>
+    </p>
+    <p>
+    For this tutorial i'll be using Natural Earth's <i><a href="https://www.naturalearthdata.com/downloads/10m-cultural-vectors/">Admin 0 Countries</a></i> dataset again. 
+    It displays the political boundaries of 242 countries in the world. <br>
+    What we will be doing is performing spatial queries using the <b>Select By Expression</b> option in the attributes table
+	You can start the selection either by clicking the select by expression <img src="img/tables_button_db8.PNG" height=25px width=25px/> icon from the toolbar, 
+	or if it's not there look for the other selection methods and click the small down arrow next to the and the click it.<br>
+	<br><img src="img/select_by_expression_db0.png" height=170px width=850px/></br></br>
+	The other way is by accessing it is through the attribute table, which you can open by clicking it's icon <img src="img/tables_db2.png" title="Open Attribute Table" height=25px width=25px/> (<kbd>F6</kbd>)<br>
+	and then clicking the select by expression <img src="img/tables_button_db8.PNG" height=25px width=25px/> icon.<br>
+	<br><img src="img/select_by_expression_db1.png" height=115px width=790px/></br></br>
+	This window should open up for you: <br>
+	<br><img src="img/select_by_expression_db2.png" height=700px width=1000px/></br></br>
+	What we are going to do is select all the countries whose centroid is <u>East of the <a href="https://en.wikipedia.org/wiki/Prime_meridian">Prime Meridian</a></u>.<br>
+	The query itself is not very complicated, we can deivide it into three stages:
+	<ol>
+		<li>Getting every country's <b>Geometry</b>, Thie is done by calling it specificaly using <i>$geometry</i></li>
+		<li>Extracting their <b>Centroid</b>, with the <i>centroid()</i> function</li>
+		<li>Checking if the centroid's <b>X coordinate (Longitude)</b>,using the <i>x()</i> function, is smaller than 0.</li>
+	</ol>
+	We can do all that in a snigle expression using the <b>Geometry</b> section of the select by expression's window.<br>
+	<br><img src="img/select_by_expression_db10.png" height=700px width=1000px/></br></br>
+	we then enter our expression which will be:<br>
+	<code> x ( centroid ( $geometry ) ) > 0 </code><br>
+	our window should now look like this:<br>
+	<br><img src="img/select_by_expression_db7.png" height=700px width=1000px/></br></br>
+	And our selection should look like this: <br>
+	<br><img src="img/select_by_expression_db8.png" height=560px width=1100px/></br></br>
+	<b>What's wrong with France?!</b><br>
+	Nothing, France has other territory outside of europe so it's centroid isn't contained within the main French border, 
+	if you perform a selection on France you will see it's a multipolygon with it's centroid somewhere in northern spain, just west of the prime meridian.<br>
+	<br><img src="img/select_by_expression_db9.png" height=730px width=690px/></br></br>
+	Try exploring the other spatial and geometric functions available in the expressions window, they will come in handy with shortening processes.<br>
+	And thats it, Simple and easy to use, and now you know how to do that in Open Source.
+	</p>
+	</br><a href="#top">Go back to the top</a><br>
+	</div>
+	</body>
+</html>

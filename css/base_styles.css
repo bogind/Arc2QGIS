@@ -5,6 +5,8 @@ html, body {
     margin: 0;
     white-space:nowrap;
     line-height: 1.7em;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    overflow-wrap: break-word;
 }
 kbd {
 	display: inline-block;
@@ -36,7 +38,8 @@ pre code {
   width: 600px;
 }
 p {
-    width: 85vw;
+    width: 75vw;
+    
 }
 table, th, td {
     border: 1px solid black;
@@ -50,6 +53,43 @@ table tr:nth-child(odd) {
 table th {
     background-color: rgb(42, 153, 61);
     color: rgb(3, 3, 3);
+}
+a {
+    color: #206020;
+}
+#badge{
+    top: 12vh;
+    position: fixed;
+    right: 2.4vw;
+}
+.badge-name {
+    background-color: #b3d89c;
+    color: #2b2d42;
+    border-style: solid;
+    border-width: 2.5px; 
+    border-color: #8d99ae;
+    border-right-style: solid;
+    border-right-width: 0.5px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    padding: 0.2em;
+    float: left;
+
+}
+.badge-number{
+    background-color: #2b2d42;
+    color: #b3d89c;
+    border-style: solid;
+    border-width: 2.5px; 
+    border-color: #8d99ae;
+    border-left-style: solid;
+    border-left-width: 0.5px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding: 0.2em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    float: right;
 }
 header {
     background-image: url("../images/topBar.png");
@@ -66,6 +106,7 @@ header {
     top: 10vh;
     width: 15vw;
     position: fixed;
+    z-index: 500;
 }
 .sidenav ul {
     list-style-type: none;
@@ -96,16 +137,17 @@ header {
     color: #b3d89c;
   }
 .content {
-    
+    white-space: normal;
     left: 15.5vw;
-    width: 85vw;
+    max-width: 80%;
     position: relative;
     padding: 5px;
-    overflow-y: auto;
+    
 }
 .content p {
     word-wrap: break-word;
-    width: 85vw;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 .content h1 {
     top: 0;
