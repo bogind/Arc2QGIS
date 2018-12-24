@@ -45,7 +45,7 @@
 	What we are going to do is select all the countries whose centroid is <u>East of the <a href="https://en.wikipedia.org/wiki/Prime_meridian">Prime Meridian</a></u>.<br>
 	The query itself is not very complicated, we can deivide it into three stages:
 	<ol>
-		<li>Getting every country's <b>Geometry</b>, Thie is done by calling it specificaly using <i>$geometry</i></li>
+		<li>Getting every country's <b>Geometry</b>, This is done by calling it specificaly using <i>$geometry</i></li>
 		<li>Extracting their <b>Centroid</b>, with the <i>centroid()</i> function</li>
 		<li>Checking if the centroid's <b>X coordinate (Longitude)</b>,using the <i>x()</i> function, is smaller than 0.</li>
 	</ol>
