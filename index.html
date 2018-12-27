@@ -38,19 +38,49 @@
     This guide-in-the-making is meant for ArcGIS users wanting to make the switch to open source solutions.</br>
     If you know how to do operations in ArcGIS and want to know how to them in QGIS, GDAL, GEOS, GRASS or any other open source way, you're welcome to see if the solution is already here.</br>
     If you want to contribute, you can edit you HTML content here, or upload a word document which i'll convert to HTML so everyone can access and enjoy it. <br>
-    Any and all help is welcome, as are requests and questions in the <a href="https://github.com/bogind/Arc2QGIS/issues">issues</a> section of the repository in <a href="https://github.com/bogind/Arc2QGIS">github</a>.</p>
-  <h3>Toolbox pages</h3>
-    <ul>
-      <li><a href="Basics/basics.html">Basic Operations and Tools in GIS</a></li>
-      <li><a href="Analysis/analysis.html">Analysis Toolbox</a></li>
-      <li><a href="Conversion/conversion.html">Conversion Toolbox</a></li>
-      <li><a href="Data Management/data_management.html">Data Management Toolbox</a></li>
-      <li><a href="Geocoding/geocoding.html">Geocoding Toolbox</a></li>
-      <li><a href="Network Analyst/network_analyst.html">Network Analyst Toolbox</a></li>
-      <li><a href="Spatial Analyst/spatial_analyst.html">Spatial Analyst Toolbox</a></li>
-      <li><a href="Spatial Statistics/spatial_statistics.html">Spatial Statistics Toolbox</a></li>
-    </ul>
+    Any and all help is welcome, as are requests and questions in the <a href="https://github.com/bogind/Arc2QGIS/issues" target="_blank">issues</a> section of the repository in <a href="https://github.com/bogind/Arc2QGIS" target="_blank">github</a>.</p>
     <p> If you want to publish content and don't know how, check out the sample html file found <a href="sample.html">here</a>.</p>
+    <h2>How Are We Doing So Far</h2>
+    <ul>
+      <li><a href="Basics/basics.html" >Basic GIS Operations</a> - 8 Pages out of 13 planned</li>
+      <li><a href="Analysis/analysis.html">Analysis Toolbox</a> - 0 Pages out of 23 planned</li>
+      <li><a href="Conversion/conversion.html">Conversion Toolbox</a> - 0 Pages out of 9 toolsets planned (check <a href="Basics/exporting_data.html">Exporting Data</a> to see if what you need might be there)</li>
+      <li><a href="Data Management/data_management.html">Data Management Toolbox</a> - 0 Pages out of 29 toolsets planned</li>
+      <li><a href="Geocoding/geocoding.html">Geocoding Toolbox</a> - 0 Pages out of 7 planned</li>
+      <li><a href="Network Analyst/network_analyst.html">Network Analyst Toolbox</a> - 0 Pages out of 32 planned</li>
+      <li><a href="Spatial Analyst/spatial_analyst.html">Spatial Analyst Toolbox</a> - 0 Pages out of 23 toolsets planned</li>
+      <li><a href="Spatial Statistics/spatial_statistics.html">Spatial Statistics Toolbox</a> - 0 Pages out of 26 planned</li>
+    </ul>
+  <h2>Open Source GIS Software You Should Know</h2>
+    <ul>
+      <li><ul><a href="https://qgis.org/en/site/" target="_blank">QGIS</a> - Is the leading OS desktop GIS software, most of the examples currently in the guide are provided on QGIS version 3.4 which is the new LTR
+        <li>Downloading QGIS - should be donw using the OSGeo4W downloader if you are using Windows<a href="https://qgis.org/en/site/forusers/download.html" target="_blank"></a></li>
+        <li>The Official QGIS documentation can be found <a href="https://docs.qgis.org/2.18/en/docs/user_manual/" target="_blank">here</a>, It is written for version 2.18 but quite a lot of functions should still work.</li>
+        <li>The QGIS training manual can be found <a href="https://docs.qgis.org/2.18/en/docs/training_manual/" target="_blank">here</a>, It too was wirtten for version 2.18.</li>
+      </ul></li>
+      <li><ul><a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> - Is an OS SQL database which can store and query spatial data using the <a href="http://postgis.net/" target="_blank">PotsGIS</a> extension (which is provided with the default installer)
+        <li>The download page for PostgreSQL can be found <a href="https://www.postgresql.org/download/">here</a>, you have to select your operating system, for windows i recommend the installer from EnterpriseDB which is the first on the windows page.</li>
+        <li>For Working with PostGIS i recommend going through the excelent workshop <a href="https://postgis.net/workshops/postgis-intro/" target="_blank">here</a></li>
+      </ul></li>
+    </ul>
+    <h2>Open Source GIS Formats You Should Know</h2>
+    <ul>
+      <li><a href="https://www.geopackage.org/">GeoPackage</a> is an open, standards-based, platform-independent, portable, self-describing, compact format for transferring geospatial information.
+        It can be used to replace both the shapefile format to store a single feature layer (or raster) or an entire FileGeoDataBase as it is based on the single file SQL DataBase of Sqlite.<br>
+        The GeoPackage Encoding Standard describes a set of conventions for storing the following within an SQLite database:
+      <ul>
+        <li>vector features</li>
+        <li>tile matrix sets of imagery and raster maps at various scales</li>
+        <li>attributes (non-spatial data, just tables)</li>
+        <li>extensions</li>
+      </ul></li>
+      <li><a href="http://geojson.org/">GeoJSON</a> is a format for encoding a variety of geographic data structures. It's simple, easy to write and use, and can be sent anywhere as it is a textual description of your data
+        GeoJSON supports the following geometry types: Point, LineString, Polygon, MultiPoint, MultiLineString, and MultiPolygon. Geometric objects with additional properties are Feature objects. Sets of features are contained by FeatureCollection objects.
+      </li>
+      <li><a href="https://www.gaia-gis.it/fossil/libspatialite/index">Spatialite</a> is an open source library intended to extend the <a href="http://www.sqlite.org/">SQLite</a> core to support fully fledged Spatial SQL capabilities.
+        SQLite is intrinsically simple and lightweight:</li>
+    </ul>
+    <p>There are others, like GML, KML etc. but this are basic and easy to use formats, readable in both desktop and web GIS.</p>
   </div>
   </body>
 </html>
