@@ -13,15 +13,14 @@ A sample/howto guide can be found in the sample.html file.
   - [x] 2.		Table Operations
   - [x] 3.		Select By Location
   - [x] 4.		Select By Expression
-  - [ ] 5.		Select By Expression - Advanced
+  - [x] 5.		Select By Expression - Advanced
   - [ ] 6.		Editing Features
   - [ ] 7.		Symbology
   - [ ] 8.		Symbology - Advanced
   - [x] 9.		Plugins
   - [ ] 10.		Labeling Features
   - [x] 11.		Exporting Data
-  - [ ] 12.		Connecting to Databases
-  - [x] 13.   Introduction to The Processing Toolbox
+  - [x] 12.   Introduction to The Processing Toolbox
 
 ### Analysis Toolbox 
 
