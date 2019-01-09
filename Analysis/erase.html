@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Analysis - Erase</title>
+		<link rel="stylesheet" type="text/css" href="../css/base_styles.css">
+    </head>
+    <body>
+        <header></header>
+            <div class="sidenav">
+                <ul>
+                    <li><a href="..">Home</a></li>
+                    <li><a href="../Basics/basics.html">Basic GIS Operations</a></li>
+                    <li><a href="../Analysis/analysis.html" class="active">Analysis Toolbox</a></li>
+                    <li><a href="../Conversion/conversion.html">Conversion Toolbox</a></li>
+                    <li><a href="../Data Management/data_management.html">Data Management Toolbox</a></li>
+                    <li><a href="../Geocoding/geocoding.html">Geocoding Toolbox</a></li>
+                    <li><a href="../Network Analyst/network_analyst.html">Network Analyst Toolbox</a></li>
+                    <li><a href="../Spatial Analyst/spatial_analyst.html">Spatial Analyst Toolbox</a></li>
+                    <li><a href="../Spatial Statistics/spatial_statistics.html">Spatial Statistics Toolbox</a></li>
+                  </ul>
+                </div>
+        <div class="content">
+                <h1 id="top">Analysis Toolbox - Overlay Toolset - Erase</h1>
+                
+                <br>
+                <a href="../Analysis/analysis.html">Back To The Analysis Toolbox</a><br>
+	            <a href="..">Back To Homepage</a><br>
+                The <b>Erase</b> tool performs an action more technically known as erase by mask, 
+                meaning using a <i>mask</i> layer to delete a part of your <i>input</i> layer.<br>
+                Performing the same operation in QGIS is done with a similiar tool from the Processing Toolbox, 
+                If you don't know how to open it, feel free to head over to the <a href="../Basics/processing.html">Introduction To The Processing Toolbox</a>.<br>
+                After opening the processing toolbox we can either search or go to the <b>Vector Overlay</b> tools with the QGIS marker, 
+                there we can find the <b><a href="https://docs.qgis.org/2.18/en/docs/user_manual/processing_algs/qgis/vector_overlay_tools.html?highlight=difference#difference">Difference</a></b> tool,
+                It should be there and also in the <b>Vector Panel -> Geprocessing Tools -> Difference</b>, both locations are shown below.<br>
+                </br><img src="img/erase_db0.5.PNG" height=315px width=725px/></br>
+                </br><img src="img/erase_db0.PNG" height=755px width=475px/></br></br>
+                The difference window should now open, i wanted to erase all the <i>points</i> masked by the <i>polygon</i> layer,<br>
+                </br><img src="img/erase_db2.PNG" height=563px width=813px/></br></br>
+                that means that my input layer is <b>point</b> and my overlay layer is <b>polygon</b>,<br>
+                </br><img src="img/erase_db1.PNG" height=250px width=250/></br></br>
+                The output can be saved to a new layer in many different options, I chose to use a temporary layer, you can use a file or PostGIS\Geopackage table.<br>
+                </br><img src="img/erase_db3.PNG" height=563px width=813px/></br></br>
+                My output looks like this, with the yellow points being the ones left after I erased the blue points that were covered by the polygon.<br>
+                </br><img src="img/erase_db4.PNG" height=250px width=250/></br></br>
+                And thats it, Simple and easy to use, and now you know how to do that in Open Source.
+                </br><a href="#top">Go back to the top</a><br>
+                <a href="../Analysis/analysis.html">Back To The Analysis Toolbox</a><br>
+	            <a href="..">Back To Homepage</a><br>
+
+        <p>
+        </p>
+    </body>
+</html>
