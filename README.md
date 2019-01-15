@@ -31,9 +31,9 @@ A sample/howto guide can be found in the sample.html file.
   - [ ] 1.4.	Split By Attributes
   - [ ] 1.5.	Tables Select
 2.	Overlay
-  - [ ] 2.1.	Erase
+  - [x] 2.1.	Erase
   - [ ] 2.2.	Identity
-  - [ ] 2.3.	Intersect
+  - [x] 2.3.	Intersect
   - [ ] 2.4.	Spatial Join
   - [ ] 2.5.	Symmetrical Difference
   - [ ] 2.6.	Union
