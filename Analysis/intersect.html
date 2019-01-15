@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Analysis - Intersect</title>
+		<link rel="stylesheet" type="text/css" href="../css/base_styles.css">
+    </head>
+    <body>
+        <header></header>
+            <div class="sidenav">
+                <ul>
+                    <li><a href="..">Home</a></li>
+                    <li><a href="../Basics/basics.html">Basic GIS Operations</a></li>
+                    <li><a href="../Analysis/analysis.html" class="active">Analysis Toolbox</a></li>
+                    <li><a href="../Conversion/conversion.html">Conversion Toolbox</a></li>
+                    <li><a href="../Data Management/data_management.html">Data Management Toolbox</a></li>
+                    <li><a href="../Geocoding/geocoding.html">Geocoding Toolbox</a></li>
+                    <li><a href="../Network Analyst/network_analyst.html">Network Analyst Toolbox</a></li>
+                    <li><a href="../Spatial Analyst/spatial_analyst.html">Spatial Analyst Toolbox</a></li>
+                    <li><a href="../Spatial Statistics/spatial_statistics.html">Spatial Statistics Toolbox</a></li>
+                  </ul>
+                </div>
+        <div class="content">
+                <h1 id="top">Analysis Toolbox - Overlay Toolset - Intersect</h1>
+                
+                <br>
+                <a href="../Analysis/analysis.html">Back To The Analysis Toolbox</a><br>
+	            <a href="..">Back To Homepage</a><br>
+                The <b>Intersect</b> tool in QGIS is very similiar tool to the one in the Analysis Toolbox, 
+                To reach it go to the <b>Processing Toolbox</b>.
+                If you don't know how to open it, feel free to head over to the <a href="../Basics/processing.html">Introduction To The Processing Toolbox</a>.<br>
+                After opening the processing toolbox we can either search or go to the <b>Vector Overlay</b> tools with the QGIS marker, 
+                there we can find the <b><a href="https://docs.qgis.org/2.18/en/docs/user_manual/processing_algs/qgis/vector_overlay_tools.html?highlight=intersection#intersection">Intersection</a></b> tool,
+                It should be there and also in the <b>Vector Panel -> Geprocessing Tools -> Difference</b>, both locations are shown below.<br>
+                </br><img src="img/intersect_db0.PNG" height=300px width=445px/></br>
+                </br><img src="img/intersect_db1.PNG" height=510px width=470px/></br></br>
+                The Intersection window should now open, i wanted to get the intersction between the purple <i>training 1 polygon</i> layer and the orange <i>polygon</i> layer<br>
+                </br><img src="img/intersect_db2.PNG" height=566px width=814px/></br></br>
+                </br><img src="img/intersect_db3.PNG" height=378px width=867px/></br></br>
+                If i only want to use some of my fields in the new layer then i have to decide which of my layers will be the <i>Input</i> and which the <i>Overlay</i>. <br>
+                </br><img src="img/intersect_db4.PNG" height=567px width=816px/></br></br>
+                The output can be saved to a new layer in many different options, I chose to use a temporary layer, you can use a file or PostGIS\Geopackage table.<br>
+                </br><img src="img/intersect_db5.PNG" height=569px width=817px/></br></br>
+                My output looks like this, with three distinct polygons (the middle one is selected).<br>
+                </br><img src="img/intersect_db6.PNG" height=250px width=250/></br></br>
+                And thats it, Simple and easy to use, and now you know how to do that in Open Source.
+                </br><a href="#top">Go back to the top</a><br>
+                <a href="../Analysis/analysis.html">Back To The Analysis Toolbox</a><br>
+	            <a href="..">Back To Homepage</a><br>
+
+        <p>
+        </p>
+    </body>
+</html>
